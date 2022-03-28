@@ -6,7 +6,7 @@
 
 Programa feito em JavaScript e renderizado em um elemento Canvas.
 
-Recreação do script Game Of Life desenvolvido por John Horton Conway em 1970.
+Recriação do script Game Of Life desenvolvido por John Horton Conway em 1970.
 
 ## Como baixar
 
