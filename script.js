@@ -6,8 +6,8 @@ const fps = 5
 
 // Game Colors
 const color = {
-    'true': 'red',
-    'false': 'red',
+    'true': 'yellow',
+    'false': 'gray',
     'line': 'black'
 }
 
