@@ -24,3 +24,12 @@ Movimente o mouse sobre o canvas para ativar as celulas que estiverem abaixo do 
 - Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
 - Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.
 - Qualquer célula viva com dois ou três vizinhos vivos continua no mesmo estado para a próxima geração.
+
+## Patch notes
+### 1.0 - (28/03/2021)
+- First commit
+
+### 1.1 - (10/04/2021)
+
+- Agora o tamanho do canvas é relativo ao tamanho do aba do navegador.
+- Ao redimencionar a aba, a quantidade e a disposição de pixels será alterada para se ajustar ao tamanho da tela e a simulação será reiniciada.
