@@ -6,9 +6,9 @@ const fps = 5
 
 // Game Colors
 const color = {
-    'true': 'yellow',
-    'false': 'gray',
-    'line': 'black'
+    'true': '#fe5f55',
+    'false': '#eef5db',
+    'line': '#fe5f55'
 }
 
 let pixelSize // Size of each pixel in game
@@ -182,12 +182,20 @@ function executeGameRules() {
 
 
 
-// GET MOUSE POSITION
+// GET INTERACTION POSITION
 
 
+// get the pixel of touch position
+function getTouchPosition(evt) {
+    let rect = canvas.getBoundingClientRect()
+    return {
+        'x': evt.touches[0].clientX - rect.left,
+        'y': evt.touches[0].clientY - rect.top
+    }
+}
 
 // get the pixel of mouse position
-function getMousePos(evt) {
+function getMousePosition(evt) {
     let rect = canvas.getBoundingClientRect()
     return {
         'x': evt.clientX - rect.left,
@@ -196,10 +204,15 @@ function getMousePos(evt) {
 }
 
 // transform a pixel position in coordinates 
-function getMouseCoord(e) {
+function getCanvasCoord(e) {
     let x 
     let y
-    let position = getMousePos(e)
+    let position
+    if (e.touches != undefined) { // Touch
+        position = getTouchPosition(e)
+    } else { // Mouse
+        position= getMousePosition(e)
+    }
     //X
     for(let c=1; c<=gameHeight; c++){
         let pixel = c * pixelSize
@@ -219,7 +232,8 @@ function getMouseCoord(e) {
     }
     draw()
 }
-canvas.addEventListener('mousemove', getMouseCoord)
+canvas.addEventListener('mousemove', getCanvasCoord)
+canvas.addEventListener('touchmove', getCanvasCoord)
 
 
 
