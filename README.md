@@ -33,3 +33,8 @@ Movimente o mouse sobre o canvas para ativar as celulas que estiverem abaixo do 
 
 - Agora o tamanho do canvas é relativo ao tamanho do aba do navegador.
 - Ao redimencionar a aba, a quantidade e a disposição de pixels será alterada para se ajustar ao tamanho da tela e a simulação será reiniciada.
+
+### 1.1.1 - (14/04/2021)
+
+- A punção que adiciona os Pixels no Object Agora é passada por um constructor que possui um modelo dos dados que cada pixel possui.
+- Nenhuma mudança para o usuário final. Apenas a forma como o código funciona foi alterada.
