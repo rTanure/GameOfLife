@@ -2,7 +2,7 @@ const canvas = document.getElementsByTagName('canvas')[0]
 const ctx = canvas.getContext('2d')
 
 const minimumPixelSize = 13
-const fps = 15
+const fps = 10
 
 // Game Color
 const color = {
