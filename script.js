@@ -33,18 +33,20 @@ let pixelState = []
 // PIXEL ARRAY FUNCTIONS
 
 
+// Pixel constructor
+function Pixel(x, y, state, neighbors){
+    this.x = x
+    this.y = y
+    this.state = state
+    this.neighbors = neighbors
+}
 
 // Careate a defalt array with each pixel
 function resetPixelArray(){
     pixelState = []
     for(c = 0; c < gameHeight; c++){
         for(e=0; e < gameWidth; e++){
-            pixelState.push( {
-                'x': e + 1,
-                'y': c + 1,
-                'state': false,
-                'neighbors': 0
-            })
+            pixelState.push( new Pixel(e + 1, c+ 1, false, 0))
         }
     }
 }
