@@ -36,5 +36,5 @@ Movimente o mouse sobre o canvas para ativar as celulas que estiverem abaixo do 
 
 ### 1.1.1 - (14/04/2021)
 
-- A punção que adiciona os Pixels no Object Agora é passada por um constructor que possui um modelo dos dados que cada pixel possui.
+- Agora os pixels são inicialmente setatos para um Array que guarda suas informação por meio de um object constructor.
 - Nenhuma mudança para o usuário final. Apenas a forma como o código funciona foi alterada.
