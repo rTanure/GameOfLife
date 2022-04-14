@@ -1,7 +1,7 @@
 const canvas = document.getElementsByTagName('canvas')[0]
 const ctx = canvas.getContext('2d')
 
-const minimumPixelSize = 10
+const minimumPixelSize = 13
 const fps = 15
 
 // Game Color
@@ -28,6 +28,8 @@ let windowHeight
 // State of each pixel in game
 let pixelState = []
 
+// Mouse click state
+let mouseClicked = false
 
 
 // PIXEL ARRAY FUNCTIONS
@@ -232,8 +234,32 @@ function getCanvasCoord(e) {
     }
     draw()
 }
-canvas.addEventListener('mousemove', getCanvasCoord)
+
+
+// when touch
 canvas.addEventListener('touchmove', getCanvasCoord)
+
+// when mouse in and click (bugs correction)
+let permit = true
+canvas.addEventListener('mousemove', (e)=>{
+    if (permit && mouseClicked) {
+        getCanvasCoord(e)
+        permit = false
+    }
+})
+permit = false
+setInterval(() => {
+    permit = true
+}, 1000/60);
+
+
+// MOUSE CLICK CONFIGURATION
+
+
+mouseClicked = false
+canvas.addEventListener('mousedown', ()=>{mouseClicked = true})
+canvas.addEventListener('mouseup', ()=>{mouseClicked = false})
+canvas.addEventListener('mouseout', ()=>{mouseClicked = false})
 
 
 
