@@ -1,4 +1,4 @@
-# Game Of Life
+# <a href="https://rtanure.github.io/GameOfLife/">Game Of Life</a>
 
 ![Screenshot](https://imgur.com/iqX0Jvr.jpg)
 
@@ -8,15 +8,9 @@ Programa feito em JavaScript e renderizado em um elemento Canvas.
 
 Recriação do script Game Of Life desenvolvido por John Horton Conway em 1970.
 
-## Como baixar
-
-1) Faça o download do repositório.
-2) Descompacte o arquivo.
-3) Rode o arquivo "index.html"
-
 ## Como usar
 
-Movimente o mouse sobre o canvas para ativar as celulas que estiverem abaixo do ponteiro.
+Segure o botão esquerdo do mouse e o mova sobre o canvas para ativar os pixels sob o cursor.
 
 ## Regras do jogo
 
@@ -38,3 +32,10 @@ Movimente o mouse sobre o canvas para ativar as celulas que estiverem abaixo do 
 
 - Agora os pixels são inicialmente setatos para um Array que guarda suas informação por meio de um object constructor.
 - Nenhuma mudança para o usuário final. Apenas a forma como o código funciona foi alterada.
+
+### 1.2 - (14/04/2021)
+
+- A aplicação agora funciona em dispositivos com tela sensível ao toque.
+  - Alguns navegadores mobile como o safari podem apresentar problemas por conta das suas interações nativas de acordo com gestos especificos no touch.
+- Solução de bugs envolvendo o travamento da simulação enquanto o mouse seleciona novos pixels para serem ativados.
+- Para ativar pixels é necessário manter o botão esquerdo do mouse eenquanto o move pelo canvas.
