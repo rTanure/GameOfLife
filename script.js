@@ -1,10 +1,10 @@
 const canvas = document.getElementsByTagName('canvas')[0]
 const ctx = canvas.getContext('2d')
 
-const minimumPixelSize = 30
-const fps = 5
+const minimumPixelSize = 10
+const fps = 15
 
-// Game Colors
+// Game Color
 const color = {
     'true': '#fe5f55',
     'false': '#eef5db',
